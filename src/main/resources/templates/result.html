@@ -26,9 +26,9 @@
             <tbody>
                 <tr th:each="row : ${table}">
                     <td><span th:text="${row.paymentNum}"> Payment Number </span></td>
-                    <td>$<span th:text="${row.monthlyPayment}"> Monthly Payment </span></td>
-                    <td>$<span th:text="${row.beginBalance}"> Beginning Balance </span></td>
-                    <td>$<span th:text="${row.endBalance}"> Ending Balance </span></td>
+                    <td><span th:text="${#numbers.formatCurrency(row.monthlyPayment)}"> Monthly Payment </span></td>
+                    <td><span th:text="${#numbers.formatCurrency(row.beginBalance)}"> Beginning Balance </span></td>
+                    <td><span th:text="${#numbers.formatCurrency(row.endBalance)}"> Ending Balance </span></td>
                 </tr>
             </tbody>
         </table>
