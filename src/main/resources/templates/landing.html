@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+    <head>
+        <title>Amortization | Landing</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+    <body>
+        <h1>Amortization Calculator</h1>
+        <form action ="#" th.action ="@{/landing}" th:object="${amortization}" method="post">
+            <p>Principal: <input type="text" th:field="*{principal}"></p>
+            <p>Interest: <input type="text" th:field="*{interestRate}"></p>
+            <p>Number of Monthly Payments: <input type="text" th:field="*{numPayments}"></p>
+            <p><input type="submit" value="Submit" /> </p>
+        </form>
+    </body>
+</html>
